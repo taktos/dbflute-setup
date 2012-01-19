@@ -12,7 +12,21 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <dbflute.version>0.9.9.2C</dbflute.version>
   </properties>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>maven.seasar.org</id>
+      <name>The Seasar Foundation Maven2 Repository</name>
+      <url>http://maven.seasar.org/maven2/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <id>maven-snapshot.seasar.org</id>
+      <name>The Seasar Foundation Maven2 Repository</name>
+      <url>http://maven.seasar.org/maven2-snapshot/</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <dependencies>
     <dependency>
@@ -22,4 +36,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.seasar.dbflute</groupId>
+        <artifactId>maven-dbflute-plugin</artifactId>
+        <version>0.3.0</version>
+        <configuration>
+          <dbfluteVersion>${dbflute.version}</dbfluteVersion>
+          <schemaName>example</schemaName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
