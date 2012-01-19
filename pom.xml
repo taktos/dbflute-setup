@@ -46,6 +46,12 @@
         <configuration>
           <dbfluteVersion>${dbflute.version}</dbfluteVersion>
           <schemaName>example</schemaName>
+		  <database>h2</database>
+		  <databaseDriver>org.h2.Driver</databaseDriver>
+		  <databaseSchema>PUBLIC</databaseSchema>
+		  <databaseUrl>jdbc:h2:file:../src/main/resources/exampledb/exampledb</databaseUrl>
+		  <databaseUser>sa</databaseUser>
+		  <rootPackage>org.github.taktos.dbflute.dao</rootPackage>
         </configuration>
       </plugin>
     </plugins>
